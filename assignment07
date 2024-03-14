@@ -1,0 +1,59 @@
+kd4_jaid_83524>select count(*) from ORDERS where amt='1990-10-03';
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set, 1 warning (0.01 sec)
+
+
+
+kd4_jaid_83524>select count(*)from CUSTOMERS where city is not null;
++----------+
+| count(*) |
++----------+
+|        7 |
++----------+
+1 row in set (0.01 sec)
+
+
+
+
+kd4_kd4_jaid_83524>select min(cname) from CUSTOMERS where cname like 'G%'order by 1;
++------------+
+| min(cname) |
++------------+
+| giovanni   |
++------------+
+1 row in set (0.00 sec)
+
+
+
+
+
+kd4_jaid_83524>select city,max(rating) 'highest_rating' from CUSTOMERS group by city;
++----------+----------------+
+| city     | highest_rating |
++----------+----------------+
+| london   |            100 |
+| rome     |            200 |
+| san jose |            300 |
+| berlin   |            300 |
++----------+----------------+
+4 rows in set (0.00 sec
+
+
+
+
+kd4_jaid_83524>select snum,count(distinct odate)from ORDERS group by snum order by 1;
++------+-----------------------+
+| snum | count(distinct odate) |
++------+-----------------------+
+| 1001 |                     3 |
+| 1002 |                     3 |
+| 1003 |                     1 |
+| 1004 |                     1 |
+| 1007 |                     1 |
++------+-----------------------+
+5 rows in set (0.00 sec)
+

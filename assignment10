@@ -1,0 +1,20 @@
+kd4_jaid_83524>select a.sname,b.sname,a.city from SALESPEOPLE b,SALESPEOPLE a where a.city=b.city and a.sname < b.sname;
++--------+-------+--------+
+| sname  | sname | city   |
++--------+-------+--------+
+| motika | peel  | london |
++--------+-------+--------+
+1 row in set (0.00 sec)
+
+
+
+kd4_jaid_83524>select distinct (a.cname),b.city,a.rating from CUSTOMERS a,CUSTOMERS b where a.cnum=b.cnum and a.rating=100;
++---------+--------+--------+
+| cname   | city   | rating |
++---------+--------+--------+
+| hoffman | london |    100 |
+| clemens | london |    100 |
+| pereira | rome   |    100 |
++---------+--------+--------+
+3 rows in set (0.02 sec)
+
